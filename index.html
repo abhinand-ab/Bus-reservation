@@ -7,27 +7,26 @@
 
 <body>
 
+<nav class="navbar">
+    <h1>🚌 SmartBus</h1>
+</nav>
+
 <div class="container">
-    <h2>Bus Reservation Form</h2>
+    <h2>Book Your Bus Ticket</h2>
 
     <form id="bookingForm">
 
-        <label>Passenger Name</label>
-        <input type="text" id="name" required>
+        <input type="text" id="name" placeholder="Passenger Name" required>
 
-        <label>From</label>
-        <input type="text" id="from" required>
+        <input type="text" id="from" placeholder="From City" required>
 
-        <label>To</label>
-        <input type="text" id="to" required>
+        <input type="text" id="to" placeholder="To City" required>
 
-        <label>Date of Journey</label>
         <input type="date" id="date" required>
 
-        <label>Number of Seats</label>
-        <input type="number" id="seats" min="1" required>
+        <input type="number" id="seats" placeholder="Number of Seats" min="1" required>
 
-        <button type="submit">Book Now</button>
+        <button type="submit">Reserve Seat</button>
 
     </form>
 </div>
