@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bus Reservation</title>
+    <title>Booking Confirmed</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,26 +11,30 @@
     <h1>🚌 SmartBus</h1>
 </nav>
 
-<div class="container">
-    <h2>Book Your Bus Ticket</h2>
+<div class="container success">
 
-    <form id="bookingForm">
+    <h2>✅ Booking Confirmed</h2>
 
-        <input type="text" id="name" placeholder="Passenger Name" required>
+    <p><strong>Name:</strong> <span id="cname"></span></p>
+    <p><strong>From:</strong> <span id="cfrom"></span></p>
+    <p><strong>To:</strong> <span id="cto"></span></p>
+    <p><strong>Date:</strong> <span id="cdate"></span></p>
+    <p><strong>Seats:</strong> <span id="cseats"></span></p>
 
-        <input type="text" id="from" placeholder="From City" required>
-
-        <input type="text" id="to" placeholder="To City" required>
-
-        <input type="date" id="date" required>
-
-        <input type="number" id="seats" placeholder="Number of Seats" min="1" required>
-
-        <button type="submit">Reserve Seat</button>
-
-    </form>
+    <button onclick="goHome()">Book Another Ticket</button>
 </div>
 
-<script src="script.js"></script>
+<script>
+document.getElementById("cname").textContent = localStorage.getItem("name");
+document.getElementById("cfrom").textContent = localStorage.getItem("from");
+document.getElementById("cto").textContent = localStorage.getItem("to");
+document.getElementById("cdate").textContent = localStorage.getItem("date");
+document.getElementById("cseats").textContent = localStorage.getItem("seats");
+
+function goHome(){
+    window.location.href="index.html";
+}
+</script>
+
 </body>
 </html>
